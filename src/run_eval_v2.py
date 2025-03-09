@@ -1,27 +1,19 @@
-import os
-import json
 import copy
+import json
+import os
 import time
-import shutil
 import traceback
-from typing import cast, Any, List, Dict, Tuple, Optional
-from statistics import mean
-from collections import defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass
+from typing import Any, Dict, Optional
 
-import requests
 import fire  # type: ignore
-from tqdm import tqdm
-from jinja2 import Template
 from dataclasses_json import DataClassJsonMixin
+from tqdm import tqdm
 
-from openai import OpenAI
-from openai.types.chat.chat_completion_message_param import ChatCompletionMessageParam
-
-from src.util import encode_prompt, generate, parse_output, save
 from src.data import Character, ChatMessages, Situation, Settings, compose_key
-from src.run_judge import run_judge
 from src.provider import LLMProvider
+from src.run_judge import run_judge
+from src.util import encode_prompt, generate, parse_output, save
 
 
 @dataclass
