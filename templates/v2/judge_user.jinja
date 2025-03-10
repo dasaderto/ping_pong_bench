@@ -12,13 +12,30 @@ Given a conversation below and a character description, evaluate the following t
 - entertaining: The player's responses are extremely engaging and entertaining. The player is not repeating phrases.
 - fluency: The player's language use is of the highest quality, without any mistakes or errors. The player is perfectly fluent. There is no awkward phrasing, and the player always uses the correct word forms, word gender, cases, orthography, punctuation, etc. The player never uses non-existing words or words in a language different from the character description.
 
-Use a 100-point integer scale for your evaluations:
-- 0-20: Very poor performance
-- 21-40: Poor performance
-- 41-60: Average performance
-- 61-80: Good performance
-- 81-100: Excellent performance
+Use a 100-point scale for your evaluations with very strict criteria:
+- 0-30: Basic performance with noticeable issues
+- 31-60: Average performance, meets basic expectations
+- 61-85: Good performance, but still has room for improvement
+- 86-95: Very good performance, minor issues
+- 96-100: Perfect performance, truly exceptional (extremely rare)
 
+Look carefully for the following flaws and deduct points accordingly:
+- Any factual errors or imprecise technical explanations (-15 points minimum)
+- Repetitive phrases or concepts (-10 points)
+- Lack of specific, actionable advice (-15 points)
+- Generic responses that could apply to many questions (-20 points)
+- Unnecessary verbosity or padding (-10 points)
+- Oversimplification of complex topics (-15 points)
+
+To achieve scores above 85, responses must demonstrate:
+- Exceptional domain knowledge beyond common sources
+- Novel insights not found in standard references
+- Perfect fluency with domain-specific vocabulary
+- Optimal structure with perfect progression of ideas
+- Complete absence of any repetition or redundancy
+
+Be highly critical in your assessment.
+Scores above 90 should only be given for truly exceptional, flawless performance.
 Do not evaluate answers marked as "user".
 Evaluate all player's answers, not only the last one. Evaluate every turn separately.
 Explain scores before setting them.
