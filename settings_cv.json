@@ -24,6 +24,21 @@
                 "tags": ["cv_implementation"],
                 "text": "Вы работаете над внедрением алгоритма компьютерного зрения. Запросите конкретные рекомендации по реализации, включая выбор библиотек, настройку параметров или оптимизацию производительности.",
                 "num_turns": 3
+            },
+            {
+                "tags": ["cv_mathematics"],
+                "text": "Вы изучаете математические основы алгоритмов компьютерного зрения. Задайте вопрос о конкретных математических методах, используемых в CV, таких как преобразования, фильтры, оптимизация или статистические модели.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_depth_perception"],
+                "text": "Вы разрабатываете систему восприятия глубины для автономного робота. Задайте вопросы о методах стереозрения, структурированного света или других технологиях получения информации о глубине сцены.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_medical_imaging"],
+                "text": "Вы работаете в области медицинской визуализации. Задайте вопросы о применении компьютерного зрения для анализа медицинских изображений, таких как МРТ, КТ или рентгеновские снимки.",
+                "num_turns": 3
             }
         ],
         "version": 2,
@@ -58,6 +73,21 @@
                 "tags": ["cv_implementation"],
                 "text": "You are working on implementing a computer vision algorithm. Request specific recommendations on implementation, including library selection, parameter configuration, or performance optimization.",
                 "num_turns": 3
+            },
+            {
+                "tags": ["cv_mathematics"],
+                "text": "You are studying the mathematical foundations of computer vision algorithms. Ask about specific mathematical methods used in CV, such as transformations, filters, optimization techniques, or statistical models.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_depth_perception"],
+                "text": "You are developing a depth perception system for an autonomous robot. Ask questions about stereo vision methods, structured light, or other technologies for obtaining scene depth information.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_medical_imaging"],
+                "text": "You are working in the field of medical imaging. Ask questions about applying computer vision for analyzing medical images such as MRI, CT scans, or X-rays.",
+                "num_turns": 3
             }
         ],
         "version": 2,
@@ -66,5 +96,64 @@
         "judge_system_prompt_path": "templates/v2/judge_system.jinja",
         "judge_user_prompt_path": "templates/v2/judge_user.jinja",
         "character_prompt_path": "templates/en_character.jinja"
+    },
+    "ar": {
+        "characters": [
+            {
+                "char_name": "خبير الرؤية الحاسوبية",
+                "system_prompt": "أنت خبير في الرؤية الحاسوبية مع معرفة عميقة في مجال التعلم الآلي والشبكات العصبية ومعالجة الصور وخوارزميات الرؤية الحاسوبية. تشمل خبرتك كلاً من المعرفة النظرية والتطبيقات العملية لتقنيات الرؤية الحاسوبية عبر مجالات متنوعة بما في ذلك التعرف على الأشياء والتقسيم والتتبع والتعرف على الوجوه وSLAM وإعادة البناء ثلاثي الأبعاد والتعلم العميق. أنت دائمًا تقدم معلومات دقيقة وحديثة ومفيدة استنادًا إلى أحدث الأبحاث وأفضل الممارسات في الصناعة.",
+                "example_prompt": "User: ما هي هندسة الشبكات العصبية التي تعتبر حاليًا الأكثر فعالية لمهام تقسيم الصور؟\nخبير الرؤية الحاسوبية: حاليًا، تشمل الهندسات الأكثر فعالية لتقسيم الصور ما يلي:\n\n1. **U-Net وتعديلاتها** - U-Net++ و3D U-Net للبيانات الحجمية. هذه فعالة بشكل خاص للصور الطبية بسبب هندستها القائمة على الترميز-فك الترميز واتصالات التخطي التي تحافظ على المعلومات المكانية.\n\n2. **DeepLabV3+** - يستخدم تجميع الهرم المكاني المثقوب لالتقاط السياق على مقاييس مختلفة وهيكل الترميز-فك الترميز لحدود تقسيم دقيقة.\n\n3. **Mask R-CNN** - امتداد لـ Faster R-CNN يضيف فرعًا للتنبؤ بأقنعة الكائنات، مما يجعله حلاً قويًا لتقسيم الحالات.\n\n4. **هندسات قائمة على المحولات** - SETR وSegmenter وSegFormer تجلب نجاح المحولات إلى مهام التقسيم، وغالبًا ما تتفوق على المناهج القائمة على CNN في الدقة، خاصة في المشاهد المعقدة.\n\n5. **هندسات قائمة على الكفاءة** - EfficientSeg، المبني على EfficientNet، يحسن التوازن بين الدقة والكفاءة الحسابية.\n\nيعتمد اختيار الهندسة على المهمة المحددة والموارد الحسابية المتاحة ومتطلبات السرعة/الدقة. للتطبيقات في الوقت الحقيقي، غالبًا ما يتم استخدام BiSeNet أو FastSCNN، مضحين بقدر صغير من الدقة مقابل السرعة.",
+                "initial_message": "مرحبًا! أنا جاهز للإجابة على أي أسئلة لديك حول الرؤية الحاسوبية ومشاركة رؤى الخبراء في هذا المجال.",
+                "summary": "خبير في الرؤية الحاسوبية مع معرفة نظرية وعملية عميقة."
+            }
+        ],
+        "situations": [
+            {
+                "tags": ["computer_vision"],
+                "text": "اطرح سؤالاً من مجال الرؤية الحاسوبية باستخدام مجموعة الأسئلة المتوفرة. قيّم اكتمال ودقة وقابلية تطبيق استجابة النموذج عمليًا.",
+                "num_turns": 2
+            },
+            {
+                "tags": ["cv_expert_advice"],
+                "text": "تخيل أنك مطور يعمل على نظام رؤية حاسوبية. تحتاج إلى مساعدة في مشكلة محددة. اطرح سؤالاً كما لو كنت تستشير خبيرًا للحصول على نصيحة حول حل تحدٍ تقني حقيقي.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_implementation"],
+                "text": "أنت تعمل على تنفيذ خوارزمية رؤية حاسوبية. اطلب توصيات محددة بشأن التنفيذ، بما في ذلك اختيار المكتبة وتكوين المعلمات أو تحسين الأداء.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_mathematics"],
+                "text": "أنت تدرس الأسس الرياضية لخوارزميات الرؤية الحاسوبية. اسأل عن طرق رياضية محددة مستخدمة في الرؤية الحاسوبية، مثل التحويلات أو المرشحات أو تقنيات التحسين أو النماذج الإحصائية.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["math_linear_algebra"],
+                "text": "أنت تدرس الجبر الخطي المستخدم في الرؤية الحاسوبية. اطرح أسئلة حول مصفوفات التحويل، وتحويل الإحداثيات، وتحليل القيم المفردة، وكيفية تطبيق هذه المفاهيم في خوارزميات الرؤية الحاسوبية.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["math_optimization"],
+                "text": "أنت تعمل على مشكلة تحسين في نظام رؤية حاسوبية. اطرح أسئلة حول طرق تحسين الدالة الخسارة، وتقنيات النزول التدريجي، والتحسين المقيد، وكيفية تجنب الحلول المثلى المحلية.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["math_statistics"],
+                "text": "أنت مهتم بالأساليب الإحصائية في الرؤية الحاسوبية. اطرح أسئلة حول النماذج الاحتمالية، واستنتاج بايز، والتقدير الأعظمي للاحتمالية، وتطبيقاتها في معالجة الصور والتعرف على الأنماط.",
+                "num_turns": 3
+            },
+            {
+                "tags": ["cv_3d_reconstruction"],
+                "text": "أنت تعمل على مشروع إعادة البناء ثلاثي الأبعاد. اطرح أسئلة حول الهندسة متعددة الرؤى، والهيكل من الحركة، والتكامل الحجمي، أو تقنيات أخرى لإنشاء نماذج ثلاثية الأبعاد من صور ثنائية الأبعاد.",
+                "num_turns": 3
+            }
+        ],
+        "version": 2,
+        "interrogator_system_prompt_path": "templates/v2/interrogator_system.jinja",
+        "interrogator_user_prompt_path": "templates/v2/interrogator_user.jinja",
+        "judge_system_prompt_path": "templates/v2/judge_system.jinja",
+        "judge_user_prompt_path": "templates/v2/judge_user.jinja",
+        "character_prompt_path": "templates/ar_character.jinja"
     }
 }
